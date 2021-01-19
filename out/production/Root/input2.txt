@@ -1,0 +1,6 @@
+Driver Brian
+Driver Arthur
+Trip Minsu 07:30 08:00 100
+Trip Arthur 13:02 13:32 30
+Driver Minsu
+Driver Arthur
