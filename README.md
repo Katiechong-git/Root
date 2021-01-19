@@ -40,9 +40,7 @@ Dan: 39 miles @ 47 mph
 Kumi: 0 miles
 ```
 
-----------------------------------------------------------------------
-
-Instructions to run at command line:
+## Instructions to run at command line:
 
 1. Open terminal on Mac or CMD on windows
 
