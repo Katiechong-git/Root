@@ -11,7 +11,7 @@ public class TestSolution {
 
     @Test
     public void testStoreInput() throws FileNotFoundException {
-        solution1.storeInput("./src/input1.txt");
+        solution1.storeInput("./src/test/input1.txt");
 
         Driver Lauren = new Driver("Lauren");
         Lauren.distance = 42;
@@ -33,7 +33,7 @@ public class TestSolution {
 
         assertEquals(hashmap1, solution1.hashmap);
 
-        solution2.storeInput("./src/input2.txt");
+        solution2.storeInput("./src/test/input2.txt");
 
         Driver Minsu = new Driver("Minsu");
         Minsu.distance = 0;
@@ -58,7 +58,7 @@ public class TestSolution {
 
     @Test
     public void testSortDrivers() throws FileNotFoundException {
-        solution1.storeInput("./src/input1.txt");
+        solution1.storeInput("./src/test/input1.txt");
 
         Driver Lauren = new Driver("Lauren");
         Lauren.distance = 42;
@@ -78,7 +78,7 @@ public class TestSolution {
         assertEquals(Dan, driverList1.get(1));
         assertEquals(Kumi, driverList1.get(2));
 
-        solution2.storeInput("./src/input2.txt");
+        solution2.storeInput("./src/test/input2.txt");
 
         Driver Minsu = new Driver("Minsu");
         Minsu.distance = 0;
