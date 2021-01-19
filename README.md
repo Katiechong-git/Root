@@ -42,13 +42,13 @@ Kumi: 0 miles
 ## My Approach: 
 
 ### 1. Make a Driver class. 
-Since there are several different attributes that can be associated with each driver, I decided to make a Driver class, and each driver instance will have name, distance, speed, time attibutes. In the end, I can sort the drivers based on their distance travelled. Since the input command for trips is in the format of "Trip Dan 07:15 07:45 17.3", the driver class should have setDistance(), setTime(), and setSpeed() methods and calculate distance travelled in total, time travelled in total and the average speed respectively.  
+Since there are several different attributes that can be associated with each driver, I decided to make a Driver class, and each driver instance will have name, distance, speed, time attibutes. In the end, I can sort the drivers based on their distance travelled. 
 
 ### 2. Scan and parse the input.txt file. 
-I decided to make a Solution class and scan every line (command) in the input.txt file in my storeInput method. I want to parse each command so first thing I did was to get rid of the white space of each command and store it into a array of words, so that I can access different attributes of the Driver by using index of the words array.
+I decided to make a Solution class and scan every line (command) in the input.txt file in my storeInput method. I want to parse each command so first thing I did was to split each command by white space, and store it into a array of words, so that I can access different attributes of the Driver by using index of the words array.
 
 ### 3. Make a HashMap for drivers and store each trip. 
-Because there could be mutiple trips for a driver, I want to have easy access to each Driver instance when I encounter another trip for the same driver. Therefore, I made a HashMap with key = driver.name and value = Driver. Since they could only be two types of command, the first command is Driver and the second command is Trip, I can then first check if the current command is Driver or Trip. If it is a driver command, then I make a new Driver instance and add it to my hashmap, if its a trip command, then I find the driver by name using HashMap, then update the driver's total distance, time, and speed. I also had to make another method in my Driver class speedValid() to check if the speed of this current trip is less than 5 mph or greater than 100 mph. If this trip's speed is valid, then I can update my driver instance. 
+Because there could be mutiple trips for a driver, I want to have easy access to each Driver instance when I encounter another trip for the same driver. Therefore, I made a HashMap with key = driver.name and value = Driver. For each command, I can then first check if the command is Driver or Trip. If it is a driver command, then I make a new Driver instance and add it to my hashmap, if its a trip command, then I find the driver by name using HashMap, then update the driver's total distance, time, and speed. I also had to make another method in my Driver class speedValid() to check if the speed of this current trip is less than 5 mph or greater than 100 mph. If this trip's speed is valid, then I can update my driver instance. 
 
 ### 4. Put the drivers into a list and sort the drivers based on distance. 
 Now that I have a hashmap of all the drivers, I can store every driver into a ArrayList. I use a new Comparator based on the driver's travel distance to sort the driver's list by desending order. 
@@ -58,13 +58,13 @@ Finally I can generate a report of drivers by print them out one by one from the
 
 ## My tests 
 
-All my testing files are under src/test. I created a testing file for Driver class and a testing file for Solution class. I tested the driver class' every method using two drivers instance. For testing Solution class, I used two input files, one is the example input in problem statement, the other one is a list of commands of three people, with Driver and Trip commands not in order (Trip command can go first before the Driver command). In addition, I made one driver to have no trip, one driver to have a trip that is over speed limit, and another driver to have a trip within the speed limit. 
+All my testing files and solution files are under src. I created a testing file for Driver class and a testing file for Solution class. I tested the driver class' every method using two drivers instance. For testing Solution class, I used two input files, one is the example input in problem statement, the other one is a list of commands of three people, with Driver and Trip commands not in order (Trip command can go first before the Driver command). In addition, I made one driver to have no trip, one driver to have a trip that is over speed limit, and another driver to have a trip within the speed limit. 
 
-## Instructions to run at command line:
+## Instructions to run your test file at command line:
 
 1. Open terminal on Mac or CMD on windows
 
-2. cd into the directory where you wanna clone this project
+2. cd into the directory where you want to clone this project
 
 3. git clone the project under your current directory
 
@@ -78,3 +78,6 @@ All my testing files are under src/test. I created a testing file for Driver cla
 
 6. 👏 Now you should be able to see the drivers' report! 
 
+## Instructions to run my test files at command line:
+
+Same as run the user test files at command line, but compile and replace the filename in step 6 and step 7 with TestDriver and TestSolution. 
