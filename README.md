@@ -39,6 +39,12 @@ Lauren: 42 miles @ 34 mph
 Dan: 39 miles @ 47 mph
 Kumi: 0 miles
 ```
+
+## My Assumptions 
+
+For this exampe, I assumed that the input file will always be valid. Which means at every line, the command is either the format of 
+`Driver Dan` or `Trip Dan 07:15 07:45 17.3`. In addition, I also assumed that the name for the driver is just one word instead of two words. 
+
 ## My Approach: 
 
 ### 1. Make a Driver class. 
@@ -58,7 +64,7 @@ Finally I can generate a report of drivers by print them out one by one from the
 
 ## My tests 
 
-All my testing files and solution files are under src. I created a testing file for Driver class and a testing file for Solution class. I tested the driver class' every method using two drivers instance. For testing Solution class, I used two input files, one is the example input in problem statement, the other one is a list of commands of three people, with Driver and Trip commands not in order (Trip command can go first before the Driver command). In addition, I made one driver to have no trip, one driver to have a trip that is over speed limit, and another driver to have a trip within the speed limit. 
+All my testing files and solution files are under src. I created a testing file for Driver class and a testing file for Solution class. I tested the driver class' every method using two drivers instance. For testing Solution class, I used two input files, one is the example input in problem statement, the other one is a list of commands of three people, with Driver and Trip commands not in order (Trip command can go first before the Driver command). In addition, I made one driver to have no trip, one driver to have a trip that is over speed limit, and another driver to have a trip within the speed limit. You can run my test files in Intellij IDEA. 
 
 ## Instructions to run your test file at command line:
 
@@ -76,8 +82,4 @@ All my testing files and solution files are under src. I created a testing file 
 
 5. Follow the prompt at command line to enter the full path of your test file 
 
-6. 👏 Now you should be able to see the drivers' report! 
-
-## Instructions to run my test files at command line:
-
-Same as run the user test files at command line, but compile and replace the filename in step 6 and step 7 with TestDriver and TestSolution. 
+6. 👏 Now you should be able to see the drivers' report!  
