@@ -43,7 +43,7 @@ Kumi: 0 miles
 ## My Assumptions 
 
 For this exampe, I assumed that the input file will always be valid. Which means at every line, the command is either the format of 
-`Driver Dan` or `Trip Dan 07:15 07:45 17.3`. In addition, I also assumed that the name for the driver is just one word instead of two words. 
+`Driver Dan` or `Trip Dan 07:15 07:45 17.3`. In addition, I also assumed that the name for the driver is just one word instead of two words. Based on the problem statement, I also assumed that drivers' ending time is always later than starting time, and there are no two drivers that have the same names. 
 
 ## My Approach: 
 
